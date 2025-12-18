@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+
+set -eo pipefail
+
+template() {
+
+  local id=$1
+  cat << EOTEMPLATE
+# $id (name)
+
+(short description)
+
+## Outcome
+
+(summary of benefit / results)
+
+## See also
+
+- (hyperlinked item)
+EOTEMPLATE
+
+}
+
+shortcode() {
+
+  local type=$1
+  local shortcode
+  shortcode="${type:0:3}"
+  echo "${shortcode^^}"
+
+}
+
+latest() {
+
+  local type=$1
+  ls -1 "${type}s/$(shortcode "$type")"*.md \
+    | tail -1 \
+    | grep -P -o "\d{3}"
+}
+
+next() {
+
+  local type=$1
+  local next
+  next="$(latest "$type")"
+  ((next++))
+  printf "%03d" "$next"
+
+}
+
+new() {
+
+  local type=$1
+  local next
+  local file
+  local id
+  next="$(next "$type")"
+  id="$(shortcode "$type")${next}"
+  file="${type}s/${id}.md"
+  template "$id" > "$file"
+  "$EDITOR" "$file"
+
+}
+
+main() {
+
+  local type
+  type="${0##*/}"
+  grep -q -E "^(axiom|bestpractice|feature)$" <<< "$type"
+  new "$type"
+
+}
+
+main "$@"
