@@ -12,4 +12,5 @@
 ## Features
 
 - [FEA001 Mock data](features/FEA001.md)
+- [FEA002 Mock auth](features/FEA002.md)
 
