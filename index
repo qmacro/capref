@@ -9,7 +9,7 @@ main() {
     while read -r file; do
       title="$(head -1 "$file" | sed -e 's/^# *//')"
       echo "- [$title]($file)"
-    done <<< "$(find "$type" -name "*.md")"
+    done <<< "$(find "$type" -name "*.md" | sort)"
     echo
   done
 
