@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -eo pipefail
+
+main() {
+
+  for type in axioms bestpractices features; do
+    echo -e "## ${type^}\n"
+    while read -r file; do
+      title="$(head -1 "$file" | sed -e 's/^# *//')"
+      echo "- [$title]($file)"
+    done <<< "$(find "$type" -name "*.md")"
+    echo
+  done
+
+}
+
+main "$@"
