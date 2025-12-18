@@ -9,7 +9,7 @@ template() {
   cat << EOTEMPLATE
 # $id $title
 
-(short description in imperative form e.g. "use ...", "avoid ...", etc)
+(brief description; for best practices use imperative form e.g. "use", "avoid", etc)
 
 ## Outcome
 
@@ -17,7 +17,7 @@ template() {
 
 ## See also
 
-- (hyperlinked item)
+- (hyperlinked item, capitalised at start, no period at end)
 EOTEMPLATE
 
 }
