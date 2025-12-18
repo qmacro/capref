@@ -5,10 +5,11 @@ set -eo pipefail
 template() {
 
   local id=$1
+  local title=$2
   cat << EOTEMPLATE
-# $id (name)
+# $id $title
 
-(short description)
+(short description in imperative form e.g. "use ...", "avoid ...", etc)
 
 ## Outcome
 
@@ -57,17 +58,18 @@ new() {
   next="$(next "$type")"
   id="$(shortcode "$type")${next}"
   file="${type}s/${id}.md"
-  template "$id" > "$file"
+  template "$id" "$title" > "$file"
   "$EDITOR" "$file"
 
 }
 
 main() {
 
-  local type
+  local type title
   type="${0##*/}"
+  title="${1:?"Specify title for ${type}"}"
   grep -q -E "^(axiom|bestpractice|feature)$" <<< "$type"
-  new "$type"
+  new "$type" "$title"
 
 }
 
