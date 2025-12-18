@@ -4,9 +4,9 @@
 
 ## Bestpractices
 
+- [BES001 Prefer flat models](bestpractices/BES001.md)
 - [BES002 Think local-first](bestpractices/BES002.md)
 - [BES003 Embrace convention over configuration](bestpractices/BES003.md)
-- [BES001 Prefer flat models](bestpractices/BES001.md)
 - [BES004 Follow domain modeling naming conventions](bestpractices/BES004.md)
 
 ## Features
