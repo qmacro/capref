@@ -1,6 +1,7 @@
 ## Axioms
 
 - [AXI001 What not how](axioms/AXI001.md)
+- [AXI002 Less is more](axioms/AXI002.md)
 
 ## Bestpractices
 
@@ -8,10 +9,12 @@
 - [BES002 Think local-first](bestpractices/BES002.md)
 - [BES003 Embrace convention over configuration](bestpractices/BES003.md)
 - [BES004 Follow domain modeling naming conventions](bestpractices/BES004.md)
+- [BES005 Factor out separate concerns](bestpractices/BES005.md)
 
 ## Features
 
 - [FEA001 Mock data](features/FEA001.md)
 - [FEA002 Mock auth](features/FEA002.md)
 - [FEA003 Mock remote services](features/FEA003.md)
+- [FEA004 Extend models](features/FEA004.md)
 
