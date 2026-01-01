@@ -10,6 +10,7 @@
 - [BES003 Embrace convention over configuration](bestpractices/BES003.md)
 - [BES004 Follow domain modeling naming conventions](bestpractices/BES004.md)
 - [BES005 Factor out separate concerns](bestpractices/BES005.md)
+- [BES006 Compose with reuse in mind](bestpractices/BES006.md)
 
 ## Features
 
