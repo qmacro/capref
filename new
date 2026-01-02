@@ -4,12 +4,26 @@ set -eo pipefail
 
 template() {
 
-  local id=$1
-  local title=$2
-  cat << EOTEMPLATE
+  local type=$1
+  local id=$2
+  local title=$3
+  case "$type" in
+    axiom)
+      cat << EOAXIOM
 # $id $title
 
-(brief description; for best practices use imperative form e.g. "use", "avoid", etc)
+(brief description, including a summary of benefits)
+
+## See also
+
+- (hyperlinked item, capitalised at start, no period at end)
+EOAXIOM
+      ;;
+    bestpractice)
+      cat << EOBESTPRACTICE
+# $id $title
+
+(brief description, using imperative form e.g. "use", "avoid", etc)
 
 ## Outcome
 
@@ -18,7 +32,20 @@ template() {
 ## See also
 
 - (hyperlinked item, capitalised at start, no period at end)
-EOTEMPLATE
+EOBESTPRACTICE
+      ;;
+    feature)
+      cat << EOFEATURE
+# $id $title
+
+(brief description)
+
+## See also
+
+- (hyperlinked item, capitalised at start, no period at end)
+EOFEATURE
+      ;;
+  esac
 
 }
 
@@ -58,7 +85,7 @@ new() {
   next="$(next "$type")"
   id="$(shortcode "$type")${next}"
   file="${type}s/${id}.md"
-  template "$id" "$title" > "$file"
+  template "$type" "$id" "$title" > "$file"
   "$EDITOR" "$file"
 
 }
