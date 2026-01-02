@@ -2,12 +2,13 @@
 
 - [AXI001 What not how](axioms/AXI001.md)
 - [AXI002 Less is more](axioms/AXI002.md)
+- [AXI003 Convention over configuration](axioms/AXI003.md)
 
 ## Bestpractices
 
 - [BES001 Prefer flat models](bestpractices/BES001.md)
 - [BES002 Think local-first](bestpractices/BES002.md)
-- [BES003 Embrace convention over configuration](bestpractices/BES003.md)
+- [BES003 Work in harmony with the framework](bestpractices/BES003.md)
 - [BES004 Follow domain modeling naming conventions](bestpractices/BES004.md)
 - [BES005 Factor out separate concerns](bestpractices/BES005.md)
 - [BES006 Compose with reuse in mind](bestpractices/BES006.md)
