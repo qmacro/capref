@@ -20,4 +20,5 @@
 - [FEA002 Mock auth](features/FEA002.md)
 - [FEA003 Mock remote services](features/FEA003.md)
 - [FEA004 Extend models](features/FEA004.md)
+- [FEA005 Declarative constraints](features/FEA005.md)
 
