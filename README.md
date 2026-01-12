@@ -12,6 +12,7 @@
 - [BES004 Follow domain modeling naming conventions](bestpractices/BES004.md)
 - [BES005 Factor out separate concerns](bestpractices/BES005.md)
 - [BES006 Compose with reuse in mind](bestpractices/BES006.md)
+- [BES007 Provide public entry points to reuse packages](bestpractices/BES007.md)
 
 ## Features
 
