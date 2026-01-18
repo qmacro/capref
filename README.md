@@ -3,6 +3,7 @@
 - [AXI001 What not how](axioms/AXI001.md)
 - [AXI002 Less is more](axioms/AXI002.md)
 - [AXI003 Convention over configuration](axioms/AXI003.md)
+- [AXI004 Services are cheap](axioms/AXI004.md)
 
 ## Bestpractices
 
