@@ -23,4 +23,5 @@
 - [FEA003 Mock remote services](features/FEA003.md)
 - [FEA004 Extend models](features/FEA004.md)
 - [FEA005 Declarative constraints](features/FEA005.md)
+- [FEA006 Status-transition flows](features/FEA006.md)
 
